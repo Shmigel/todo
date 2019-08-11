@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <script src="main.js"></script>
+    <script src="pagination.js"></script>
+    <script src="login.js"></script>
+    <script src="utils.js"></script>
+    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/yegor256/tacit@gh-pages/tacit-css-1.5.1.min.css"/>
+    <title>Todo</title>
+  </head>
+  <body>
+      <h1>To-Do
+        <small>List</small>
+      </h1>
+      <input id="todo-text" type="text" />
+      <button onclick="handleAdd()">Add</button>
+      <button onclick="handleLogout()">Logout</button>
+
+
+      <table id="task-table">
+          <thead>
+            <tr>
+              <th>Tasks</th>
+              <th></th>
+              <th></th>
+            </tr>
+          </thead>
+          <tbody id="tbody">
+          </tbody>
+        </table>
+
+      <div id="pagination">
+        <a onclick="previousPage()" id="btn_prev">Prev</a>
+        page: <span id="page"></span>
+        <a onclick="nextPage()" id="btn_next">Next</a>
+      </div>
+
+      <!-- <button onclick="test()">Test</button> -->
+
+      <div class="hiden-form" id="login-form">
+        <div class="hiden-form-content">
+          <label for="username-input">Your username:</label>
+          <input id="username-input" type="text" />
+          <br/>
+          <label for="password-input">Your password:</label>
+          <input id="password-input" type="text" />
+          <br/>
+          <button onclick="handleLogin()">Login</button>
+          <button onclick="handleRegister()">Register</button>
+        </div>
+      </div>
+
+      <div class="hiden-form" id="update-task-form">
+        <div class="hiden-form-content">
+          <label for="title-input">New title:</label>
+          <input id="title-input" type="text" />
+          <br/>
+          <button onclick="handleUpdateTask()">Update</button>
+          <button onclick="handleCloseUpdateForm()">Close</button>
+        </div>
+      </div>
+
+  </body>
+</html>
